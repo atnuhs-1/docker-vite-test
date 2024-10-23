@@ -20,12 +20,25 @@ git fetch origin
 git checkout -b front/develop origin/front/develop
 ```
 
-2. 環境変数ファイルの準備
+2. 依存パッケージのインストール
+
+```bash
+# frontディレクトリに移動
+cd front
+
+# パッケージのインストール（IDE用）
+npm install
+
+# プロジェクトルートに戻る
+cd ..
+```
+
+3. 環境変数ファイルの準備
 ```bash
 cp .env.example .env
 ```
 
-3. Dockerコンテナの起動
+4. Dockerコンテナの起動
 ```bash
 # イメージのビルド
 docker compose build
@@ -34,7 +47,7 @@ docker compose build
 docker compose up -d
 ```
 
-4. アプリケーションの確認
+5. アプリケーションの確認
 - ブラウザで http://localhost:5173 にアクセス
 
 ### 開発用コマンド
